@@ -1,0 +1,245 @@
+
+:root {
+  --text-color:black;
+  --background-color:#A9E2F3;
+  --accent-color:#01DFA5;
+}
+
+body {
+  margin:0;
+  font-family: 'Source Sans Pro';
+  font-weight:bold;
+}
+
+.navbar_home{
+  display:flex;
+  margin:2px;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--text-color);
+  align-items: center;
+  padding: 16px 24px;
+  background-color: white;
+  position: sticky;
+  top:0;
+  z-index: 25;
+}
+
+.navbar{
+  display:flex;
+  margin:2px;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--text-color);
+  align-items: center;
+  padding: 0px 24px;
+  background-color: white;
+  position: sticky;
+  top:0;
+  z-index: 25;
+}
+
+#helloworld {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar_logo{
+  font-size: 24px;
+  color:var(--text-color);
+  z-index: 20;
+  animation: showText 0.5s;
+}
+
+.navbar_logo i{
+  color:var(--accent-color);
+  animation: showText 0.5s;
+}
+
+.navbar_menu{
+  display:flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar_menu li{
+  text-align:center;
+  width: 100%;
+  z-index: 20;
+  animation: showText 0.5s;
+}
+.navbar_menu li:hover {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.navbar_menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+  padding: 8px 24px;
+}
+.navbar_adress {
+  color:var(--text-color);
+  font-size: 20px;
+  z-index: 20;
+  animation: showText 0.5s;
+}
+.navbar_adress:hover {
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+.navbar_hambuger {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--accent-color);
+  z-index: 20;
+}
+
+
+/* 프로필 창 */
+
+.navbar_adress_list {
+  display: none;
+  position: fixed;
+  padding: 0;
+  box-shadow:3px 3px 0 0 gray;
+  border: 0px solid gray;
+  border-radius: 10px;
+  right:25px;
+  animation: showTextDown 0.5s;
+  z-index: 50;
+  background-color: white;
+}
+
+.navbar_adress_list ul{
+  padding: 8px;
+  margin: 0 auto;
+}
+
+.navbar_adress_list li{
+  list-style:none;
+  border-bottom: 1px solid gray;
+  color: var(--accent-color);
+  padding-top:10px;
+  display: flex;
+  font-size: 20px;
+}
+
+.navbar_adress_list p {
+  margin:0;
+  padding: 5px;
+}
+
+.navbar_adress_list .adress_ul div{
+  color: gray;
+  font-size: 15px;
+  padding-top:6px;
+  padding-left: 5px;
+}
+
+.navbar_adress_list .adress_title{
+  padding-top:10px;
+  padding-bottom:10px;
+  text-align: center;
+  background-color: var(--accent-color);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.adress_img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.adress_img img{
+  width: auto;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 70%;
+}
+
+.navbar_adress_list.active{
+  display: block;
+}
+
+/* 사이즈 햄버거 메뉴 */
+
+@media screen and (max-width:700px) {
+  .navbar_logo{
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 20;
+  }
+  .navbar_home {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 27px 23px;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 27px 23px;
+  }
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+  }
+  .navbar_menu li {
+    text-align:center;
+    width:100%;
+  }
+  .navbar_menu a{
+    display: block;
+    padding: 8px 0px;
+  }
+  .navbar_adress {
+    display: none;
+    justify-content: center;
+    text-align: center;
+    /* padding-left: 300px; */
+    width:100%;
+    z-index: 20;
+  }
+  .navbar_hambuger {
+    display: block;
+    z-index: 20;
+  }
+  .navbar_menu.active,
+  .navbar_adress.active {
+    display: block;
+
+  }
+}
+
+/* 타이틀 애니메이션 */
+
+@keyframes showText {
+  from{
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes showTextDown {
+  from{
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

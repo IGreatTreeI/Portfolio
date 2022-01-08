@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio - Home</title>
+    <link rel="stylesheet" href="main_menu.css">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/90769bf48f.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- 메뉴바 -->
+      <nav class="navbar_home">
+        <div class="navbar_logo">
+          <i class="fas fa-dove"></i>
+          <a href="#" id= "helloworld" style="margin:0px">HelloWorld</a>
+        </div>
+        <ul class="navbar_menu">
+          <li><a href="home.html" style="color:#04B486">Home</a></li>
+          <li><a href="introduce.html">Introduce</a></li>
+          <li><a href="study.html">Study</a></li>
+          <li><a href="plan.html">Plan</a></li>
+        </ul>
+        <div class="navbar_adress">
+          <i class="fas fa-address-card"></i>
+        </div>
+        <a href="#" class="navbar_hambuger"><i class="fas fa-bars"></i></a>
+      </nav>
+
+    <!-- 프로필 -->
+      <div class="navbar_adress_list">
+        <div class="adress_title">
+          프로필
+        </div>
+        <div class="adress_img">
+          <img src="./img/photo_me4.jpg" alt="">
+          박도형
+        </div>
+          <ul class="adress_ul">
+            <li>소개  <div> Introduce</div></li>
+            <p>안녕하세요!
+            <br>소프트웨어학부의 빛이 되고픈
+            <br>코딩 꿈나무 박도형입니다.</p>
+            <li>성격  <div>Personality</div></li>
+            <p>성실 ｜ 책임감 ｜ 긍정적 ｜ 섬세 ｜ 열정</p>
+            <li>좋아하는 것  <div>Favorite</div></li>
+            <p>퀴즈풀기 ｜ 음악감상 ｜ 춤추기 ｜ 탐구하기 </p>
+            <li>장점  <div>Strength</div></li>
+            <p>집중하기 ｜ 생각하기 ｜ 창의적 ｜ 도전적</p>
+          </ul>
+      </div>
+
+      <div class="section">
+      	<input type="radio" name="slide" id="slide01" checked>
+      	<input type="radio" name="slide" id="slide02">
+      	<input type="radio" name="slide" id="slide03">
+      	<div class="slidewrap">
+
+      		<ul class="slidelist">
+      			<!-- 슬라이드 영역 -->
+      			<li class="slideitem">
+      				<a>
+      					<div class="textbox">
+      						<h3 style="font-size:50px">안녕하세요!</h3>
+      						<p style="font-size:25px">HelloWorld 페이지에 오신 것을 환영합니다.</p>
+      					</div>
+      					<img src="./img/photo_me1.jpg">
+      				</a>
+      			</li>
+      			<li class="slideitem">
+      				<a>
+
+      					<div class="textbox">
+      						<h3 style="font-size:50px">저는 박도형입니다!</h3>
+      						<p style="font-size:25px">이 페이지를 통해 저를 소개해 볼까 합니다.</p>
+      					</div>
+      					<img src="./img/photo_me2.jpg">
+      				</a>
+      			</li>
+      			<li class="slideitem">
+      				<a>
+
+      					<div class="textbox">
+      						<h3 style="font-size:50px">제 모든 것을 담았습니다.</h3>
+      						<p style="font-size:25px">페이지를 자유롭게 감상해 주시면 감사하겠습니다!</p>
+      					</div>
+      					<img src="./img/photo_me3.png">
+      				</a>
+      			</li class="slideitem">
+
+      			<!-- 좌,우 슬라이드 버튼 -->
+      			<div class="slide-control">
+      				<div>
+      					<label for="slide03" class="left"></label>
+      					<label for="slide02" class="right"></label>
+      				</div>
+      				<div>
+      					<label for="slide01" class="left"></label>
+      					<label for="slide03" class="right"></label>
+      				</div>
+      				<div>
+      					<label for="slide02" class="left"></label>
+      					<label for="slide01" class="right"></label>
+      				</div>
+      			</div>
+
+      		</ul>
+      		<!-- 페이징 -->
+      		<ul class="slide-pagelist">
+      			<li><label for="slide01"></label></li>
+      			<li><label for="slide02"></label></li>
+      			<li><label for="slide03"></label></li>
+      		</ul>
+      	</div>
+      </div>
+  </body>
+</html>

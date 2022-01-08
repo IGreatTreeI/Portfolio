@@ -1,0 +1,154 @@
+* { box-sizing: border-box; }
+body { margin: 0px; }
+main { padding-bottom: 100px; }
+section {
+  position: relative;
+  padding: 5%;
+}
+section div {
+  max-width: 300px;
+  height: 300px;
+}
+
+section div span{
+  font-size: 35px;
+  font-weight: 900;
+  padding-left:5px;
+}
+
+section div p{
+  margin: 0 auto;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+section div img {
+  max-width: 300px;
+  border-radius:5px;
+}
+
+/* 배경 흐름 꾸미기 */
+
+section .wave1 {position: absolute;margin-top: 100px;margin-left: 700px;transform: translate(0, 100px);}
+
+section .green_circle3 {position: absolute;max-width: 30px;margin-top: 600px;margin-left: 800px;transform: translate(0, 30px);}
+
+section .blue_circle3 {position: absolute;max-width: 30px;margin-top: 630px;margin-left: 960px;transform: translate(0, 20px);}
+
+section .green_circle2 {position: absolute;max-width: 100px;margin-top: 650px;margin-left: 850px;transform: rotate(180deg);}
+
+section .blue_circle {position: absolute;max-width: 100px;margin-top: 680px;margin-left: 880px;transform: rotate(180deg);}
+
+section .green_circle {position: absolute;max-width: 40px;margin-top: 740px;margin-left: 850px;transform: translate(0, 50px);}
+
+section .blue_circle3_1 {position: absolute;max-width: 20px;margin-top: 800px;margin-left: 900px;transform: translate(0, 60px);}
+
+section .wave2 {position: absolute;margin-top: 900px;margin-left: 700px;transform: translate(0, 100px);}
+
+section .green_circle3_1 {position: absolute;max-width: 30px;margin-top: 1450px;margin-left: 900px;transform: translate(0, 30px);}
+
+section .blue_circle3_2 {position: absolute;max-width: 30px;margin-top: 1700px;margin-left: 800px;transform: translate(0, 30px);}
+
+section .green_circle_1 {position: absolute;max-width: 120px;margin-top: 1500px;margin-left: 850px;transform: translate(0, -50px);}
+
+section .blue_circle2 {position: absolute;max-width: 100px;margin-top: 1562px;margin-left: 905px;transform: rotate(180deg);}
+
+section .blue_circle_1 {position: absolute;max-width: 30px;margin-top: 1620px;margin-left: 950px;transform: translate(0, 50px);}
+
+/* 스크롤 사진 */
+.banner01 {
+  margin-left: 300px;
+  transform: translate(0, 100px);
+}
+
+.banner02 {
+  margin-top: 100px;
+  margin-left: 1150px;
+  transform: translate(0, 100px);
+}
+
+.banner03 {
+  margin-top: 100px;
+  margin-left: 300px;
+  transform: translate(0, 100px);
+}
+
+.banner04 {
+  margin-top: 100px;
+  margin-left: 1150px;
+  transform: translate(0, 100px);
+}
+
+.banner05 {
+  margin-top: 100px;
+  margin-left: 300px;
+  transform: translate(0, 100px);
+}
+
+/* Scroll Animation (sa, 스크롤 애니메이션) */
+.sa {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+.sa.show {
+  opacity: 1;
+  transform: none;
+}
+
+[class*="banner"] {
+  position:relative;
+  display:inline-block;
+  height:0%;
+}
+[class*="banner"] img {
+  max-width:100%;
+}
+[class*="banner"] span.text {
+  padding:10px;
+  position:absolute;
+  top:50%;
+  left:0;
+  transform:translateY(-50%);
+  display:none;
+  width:100%;
+  font-size:20px;
+  color:white;
+  font-weight:900;
+  text-align:center;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+[class*="banner"]::before, [class*="banner"]::after{
+  content:'';
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  transition:all .8s;
+  -webkit-transition:all .8s;
+}
+[class*="banner"]::before {
+  width:97%;
+  height:95%;
+  border-top:3px solid white;
+  border-bottom:3px solid white;
+  width:0;
+}
+[class*="banner"]::after {
+  width:97%;
+  height:95%;
+  border-left:3px solid white;
+  border-right:3px solid white;
+  height:0;
+}
+
+/* 호버 */
+[class*="banner"]:hover span.text {
+  display:block;
+}
+[class*="banner"]:hover::before {
+  width:calc(97% + 4px);
+}
+[class*="banner"]:hover::after {
+  height:calc(95% + 4px);
+}

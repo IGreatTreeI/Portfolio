@@ -1,0 +1,98 @@
+.gallerylist {
+  max-width: 1200px;
+  min-width: 900px;
+  width:100%;
+  margin:0 auto;
+  animation: showTextDown 2s;
+}
+
+.gallerylist ul {
+  font-size: :0;
+  padding:0;
+}
+
+.gallerylist li {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+.gallerylist a {
+  display: block;
+  width: auto;
+  margin:5px;
+}
+
+.screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.top {
+  position: absolute;
+  bottom: 150%;
+  left: 10px;
+  z-index: 2;
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+  transition:all .50s;
+}
+
+.bottom {
+  position: absolute;
+  top: 150%;
+  left: 10px;
+  z-index: 2;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  transition:all .50s;
+}
+
+.screen img {
+  width: 100%;
+}
+
+.gallerylist h3 {
+  text-decoration: none;
+  font-size: 30px;
+  text-align: center;
+  color:#666;
+}
+
+a:hover .top {
+  bottom:60%;
+}
+
+a:hover .bottom {
+  top:42%;
+}
+
+a .screen::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background:rgba(0,0,0,.5);
+  z-index: 1;
+  opacity: 0;
+  transition: all .35s;
+}
+
+a:hover .screen::after {
+  opacity: 1;
+}
+
+/* h3 폰트 스타일 */
+
+.gallerylist h3{
+  margin-bottom:0;
+  text-align: left;
+  padding-left:10px;
+  color:black;
+  font-weight: 900;
+}
